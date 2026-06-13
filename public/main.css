@@ -16,3 +16,11 @@ a {
   background-color: #171717;
   color: #e7e7e7;
 }
+
+
+/* photos  */
+img {
+  width: 20em;
+  height: 20em;
+  object-fit: cover;
+}
