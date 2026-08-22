@@ -20,7 +20,67 @@ a {
 
 /* photos  */
 img {
-  width: 20em;
-  height: 20em;
+  width: 100%;
   object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.img:hover {
+  color: #424242; 
+  -webkit-transition: all .1s ease-in;
+  -moz-transition: all .1s ease-in;
+  -ms-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  transition: all .1s ease-in;
+  opacity: 1;
+  object-fit: contain;
+  transform: scale(1.25);
+  -ms-transform: scale(1.25); /* IE 9 */
+  -webkit-transform: scale(1.25); /* Safari and Chrome */
+}
+
+.imglink {
+  text-decoration: none;
+}
+
+/* TODO: clicking on images opens custom page that blurs? */
+/* background-color: rgba(0, 0, 0, 0.61); */
+/* backdrop-filter: blur(5px); */
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  max-width: 33.33%;
+  padding: 0 2px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1400px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
